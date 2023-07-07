@@ -1,0 +1,93 @@
+@import './variables';
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+.header{
+    display: flex;
+    padding: 30px 20px;
+    &__figure{
+        width: 10%;
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+    &__container{
+        display: flex;
+        width: 90%;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__span{
+        color: $color-main-gray;
+        &:hover{
+            cursor: pointer;
+            color: black;
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.login{
+    padding: 0 10px;
+    color: $color-main-gray;
+    &:hover{
+        cursor: pointer;
+        color: black;
+    }
+}
+
+.register{
+    padding: 8px 15px;
+    gap: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: $color-main-gray;
+    &:hover{
+        cursor: pointer;
+        color: black;
+    }
+}
+
+.menu__features {
+    position: absolute;
+    padding: 20px;
+    margin-top: 17%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.menu__company{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    margin-top: 13%;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.hidden{
+    display: none;
+}
