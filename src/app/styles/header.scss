@@ -2,66 +2,82 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-  }
-.header{
+}
+
+.header {
     display: flex;
     padding: 30px 20px;
-    &__figure{
+
+    &__figure {
         width: 10%;
     }
-    &__image{
+
+    &__image {
         width: 100%;
         height: auto;
     }
-    &__container{
+
+    &__container {
         display: flex;
         width: 90%;
         gap: 10px;
         justify-content: space-between;
     }
-    &__menu{
+
+    &__menu {
         display: flex;
         align-items: center;
         padding: 0 40px;
     }
-    &__item{
+
+    &__item {
         display: flex;
         align-items: center;
         padding: 0 15px;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
     }
-    &__span{
+
+    &__span {
         color: $color-main-gray;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             color: black;
         }
     }
 
-    &__buttons{
+    &__buttons {
         display: flex;
         align-items: center;
     }
+
+    &__icon__menu {
+        display: none;
+    }
+
 }
 
-.login{
+.login {
     padding: 0 10px;
     color: $color-main-gray;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         color: black;
     }
 }
 
-.register{
+.register {
     padding: 8px 15px;
     gap: 12px;
     border: 1px solid black;
     border-radius: 10px;
     color: $color-main-gray;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         color: black;
     }
@@ -76,7 +92,7 @@ body {
     background-color: white;
 }
 
-.menu__company{
+.menu__company {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -88,6 +104,63 @@ body {
     background-color: white;
 }
 
-.hidden{
+.hidden {
     display: none;
+}
+
+.menu{
+    display: none;
+    &__container{
+        display: none;
+    }
+}
+
+.active{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+
+        &__icon__menu {
+            display: block;
+        }
+
+        &__container {
+            display: none;
+        }
+    }
+
+    .menu {
+        position: absolute;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            right: 0;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .features {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .company{
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 }
