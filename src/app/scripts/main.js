@@ -1,6 +1,7 @@
 import "../styles/style.scss";
 
 const menuContainer = document.querySelector('.menu__button');
+const menuClose = document.querySelector('.menu__close');
 const menuMovile = document.querySelector('.menu');
 const moreFeacture = document.getElementById('more__feacture');
 const lessFeacture = document.getElementById('less__feacture');
@@ -71,6 +72,18 @@ expandLess.addEventListener('click', (e) => {
     menuCompany.classList.add('hidden');
 });
 
+let isMenuVisible = false; // Estado del menú, oculto desde el inicio
+
 menuContainer.addEventListener('click', () => {
-    menuMovile.classList.add('active');
-})
+  menuMovile.classList.add('active'); // Mostrar el menú
+  menuContainer.style.display = 'none'; // Ocultar el icono del menú
+  menuClose.style.display = 'block'; // Mostrar el icono de cerrar menú
+  isMenuVisible = true; // Actualizar el estado del menú
+});
+
+menuClose.addEventListener('click', () => {
+  menuMovile.classList.remove('active'); // Ocultar el menú
+  menuContainer.style.display = 'block'; // Mostrar el icono del menú
+  menuClose.style.display = 'none'; // Ocultar el icono de cerrar menú
+  isMenuVisible = false; // Actualizar el estado del menú
+});
