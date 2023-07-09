@@ -95,7 +95,7 @@
     }
 
     .features{
-        display: grid;
+        display: flexbox;
         grid-template-columns: 5% 1fr 5%;
     }
     
@@ -125,6 +125,12 @@
         list-style: none;
         display: flex;
         justify-content: space-evenly;
+        margin-top: 100px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        
+        
+        background-color: #f0e7ed;
     }
     
     .features__element{
@@ -144,83 +150,25 @@
         border-bottom: 5px solid transparent;
     
         transition: border-color .7s;
-    }
-    
-    .features__tab--active{
-        border-color: var(--soft-red);
-    }
-    
-    .features__container{
-        grid-column: 1/-1;
-        display: flexbox;
-        grid-template-areas: "article";
-    }
-    
-    .features__article{
-        grid-area: article;
-        opacity: 0;
-        pointer-events: none;
-    
-        transition: opacity .6s;
-    }
-    
-    .features__article--active{
-        pointer-events: unset;
-        opacity: 1;
-    }
-    
+      }   
     .features__figure{
-        padding: 3rem 0;
+        padding: 5px;
         position: relative;
-    }
-    
-    .features__img{
-        width: 80%;
-        margin: 0 auto;
-        max-width: 450px;
-    }
-    
-    .features__figure::before{
-        content: "";
-        position: absolute;
-        background-color: var(--soft-blue);
-    
-        height: 150px;
-        width: 50%;
-        max-width: 450px;
-        bottom: 0;
-        left: 0;
-        border-radius: 0 100px 100px 0;
-    
-        z-index: -1;
+      
+         }
+
         
-    }
     
-    .features__texts{
-        width: 90%;
+    .features__img { 
+        width: 350px;
         margin: 0 auto;
-        margin-top: 3rem;
-        text-align: center;
+        margin-left: 70px;
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        
+        float: left;
     }
+
     
-    .features__subtitle{
-        color: var(--very-dark-blue);
-        font-size: 1.7rem;
-    }
-    
-    
-    .features__copy{
-        color: var(--grayish-blue);
-        line-height: 1.5;
-        margin-top: 1.2rem;
-    }
-    
-    .features__cta{
-        display: flexbox;
-        margin-top: 1.2rem;
-        padding: 1rem 1.5rem;
-        background-color: var(--soft-blue);
-        border-radius: 3px;
-        text-decoration: none;
-        color:#fff;
-    }
+      
