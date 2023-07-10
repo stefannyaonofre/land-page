@@ -87,3 +87,4 @@ menuClose.addEventListener('click', () => {
   menuClose.style.display = 'none'; // Ocultar el icono de cerrar menú
   isMenuVisible = false; // Actualizar el estado del menú
 });
+
